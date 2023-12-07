@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e24e2c94444be94ca8c97334f9184c9, type: 3}
+  m_Name: SwordSound
+  m_EditorClassIdentifier: 
+  _hits:
+  - {fileID: 8300000, guid: 6335fcf209ec62849a9541cd43f007e1, type: 3}
+  - {fileID: 8300000, guid: 06c55a6f037b22f40a106b6d03e8fd5b, type: 3}
+  - {fileID: 8300000, guid: 99315249da00b5e4fad6932cb374cdf0, type: 3}
+  - {fileID: 8300000, guid: 20c870ed9543b5f43bc5d6d00ab7a834, type: 3}
+  _clashsWithSword:
+  - {fileID: 8300000, guid: 0540f6b384b53b2488a3978e6e835329, type: 3}
+  - {fileID: 8300000, guid: 1916c511e120cc44b9a199a16bf71db0, type: 3}
+  - {fileID: 8300000, guid: f6f32dcafee720646aa6849c75c32147, type: 3}
+  - {fileID: 8300000, guid: f199df86c87803441a5ef80ce3888627, type: 3}
+  _blocks:
+  - {fileID: 8300000, guid: 76bdaeff86e4ad24eba2af6a7068883d, type: 3}
+  - {fileID: 8300000, guid: cb08fd6836f21fc40903e4fc20cc0601, type: 3}
+  - {fileID: 8300000, guid: bf6ea3b0163c46d42964c6f99c7ae327, type: 3}

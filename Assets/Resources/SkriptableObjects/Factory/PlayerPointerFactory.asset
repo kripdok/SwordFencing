@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7ee6513a423d7a4188602217b21a2cd, type: 3}
+  m_Name: PlayerPointerFactory
+  m_EditorClassIdentifier: 
+  _red: {fileID: 927451606468627108, guid: f6dcb78dabba71b4e9b71fc9afac8b64, type: 3}
+  _blue: {fileID: 927451606468627108, guid: 83780550a4e9b644ea3f0aff3acb35c4, type: 3}

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af275fcc62847240831e565402764fc, type: 3}
+  m_Name: UISound
+  m_EditorClassIdentifier: 
+  _clickOnButton: {fileID: 8300000, guid: a74393f6685c94b43b532ccd62a95219, type: 3}
+  _buy: {fileID: 8300000, guid: d4f936920352d7a4a8dad6006b9ba88e, type: 3}
+  _clickOnLockedButton: {fileID: 8300000, guid: cc3c308d6a9c8ec4da404a8db2112787, type: 3}
+  _countdownTimer: {fileID: 8300000, guid: 0dda131224b3b1a499c7b584b29a3e5a, type: 3}
