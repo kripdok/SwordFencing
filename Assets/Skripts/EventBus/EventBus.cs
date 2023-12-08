@@ -60,6 +60,7 @@ public class EventBus
         if (_signalCallbacks.ContainsKey(key))
         {
             var callbackToDelete = _signalCallbacks[key].FirstOrDefault(x => x.Callback.Equals(callback));
+
             if (callbackToDelete != null)
             {
                 _signalCallbacks[key].Remove(callbackToDelete);

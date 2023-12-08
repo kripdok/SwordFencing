@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour, ISubscriber
 {
+    [field: SerializeField] public Player Player { get; private set; }
     [SerializeField] private AttackBoostController _attackBoostController;
     [SerializeField] private BackgroundMusic _music;
-    [SerializeField] private Player _player;
     [SerializeField] private Spawner _spawner;
     [SerializeField] private PlayerSwordFactory _playerSwordFactory;
     [SerializeField] private PlayerPointerFactory _playerPointerFactory;
@@ -15,15 +15,14 @@ public class LevelManager : MonoBehaviour, ISubscriber
 
     public Wallet Wallet { get; private set; }
     public ContactPointer ContactPointer { get; private set; }
-    public Player Player => _player;
     public EnemyDeathCounter EnemyDeathCounter { get; private set; }
 
     public void Initialize(UIManager UIManager, IPersistentData persistentData)
     {
         _attackBoostController.Initialize();
         ContactPointer = _playerPointerFactory.Get(persistentData.PlayerData.SelectedPointer);
-        _playerSword = _playerSwordFactory.Get(persistentData.PlayerData.SelectedSword, _player.Arm);
-        _player.Initialize(_playerSword, UIManager.HealthBar, UIManager.StaminaBar);
+        _playerSword = _playerSwordFactory.Get(persistentData.PlayerData.SelectedSword, Player.Arm);
+        Player.Initialize(_playerSword, UIManager.HealthBar, UIManager.StaminaBar);
         _spawner.Initialize();
         _music.Initialize();
         _sceneChangeSystem = new SceneChangeSystem();
@@ -36,7 +35,7 @@ public class LevelManager : MonoBehaviour, ISubscriber
     {
         _sceneChangeSystem.OnEnables();
         Wallet.OnEnables();
-        _player.OnEnables();
+        Player.OnEnables();
         EnemyDeathCounter.OnEnables();
         _spawner.OnEnables();
 
@@ -47,7 +46,7 @@ public class LevelManager : MonoBehaviour, ISubscriber
     {
         _sceneChangeSystem.OnDisables();
         Wallet.OnDisables();
-        _player.OnDisables();
+        Player.OnDisables();
         EnemyDeathCounter.OnDisables();
         _spawner.OnDisables();
 
@@ -57,7 +56,7 @@ public class LevelManager : MonoBehaviour, ISubscriber
     public void Update()
     {
         _timer.Update();
-        _player.Updates();
+        Player.Updates();
     }
 
     private void CompleteLevel(FinishGameSignal signal)

@@ -765,6 +765,10 @@ PrefabInstance:
       propertyPath: _playerSwordFactory
       value: 
       objectReference: {fileID: 11400000, guid: 2f334e28e9c38dc4ca2705221ee139c9, type: 2}
+    - target: {fileID: 865835872796697820, guid: f51fa1266a0572a4fb0a973337a49218, type: 3}
+      propertyPath: <Player>k__BackingField
+      value: 
+      objectReference: {fileID: 909660716}
     - target: {fileID: 865835872927456278, guid: f51fa1266a0572a4fb0a973337a49218, type: 3}
       propertyPath: m_Name
       value: ArenaManagers
@@ -850,9 +854,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 822578326}
     - target: {fileID: 865835874090717437, guid: f51fa1266a0572a4fb0a973337a49218, type: 3}
+      propertyPath: <CoinsUI>k__BackingField
+      value: 
+      objectReference: {fileID: 1432600987}
+    - target: {fileID: 865835874090717437, guid: f51fa1266a0572a4fb0a973337a49218, type: 3}
+      propertyPath: <TimerUI>k__BackingField
+      value: 
+      objectReference: {fileID: 567705618}
+    - target: {fileID: 865835874090717437, guid: f51fa1266a0572a4fb0a973337a49218, type: 3}
       propertyPath: _countdownTimerController
       value: 
       objectReference: {fileID: 330978945}
+    - target: {fileID: 865835874090717437, guid: f51fa1266a0572a4fb0a973337a49218, type: 3}
+      propertyPath: <HealthBar>k__BackingField
+      value: 
+      objectReference: {fileID: 939812545}
+    - target: {fileID: 865835874090717437, guid: f51fa1266a0572a4fb0a973337a49218, type: 3}
+      propertyPath: <StaminaBar>k__BackingField
+      value: 
+      objectReference: {fileID: 1618230549}
     - target: {fileID: 865835874090717438, guid: f51fa1266a0572a4fb0a973337a49218, type: 3}
       propertyPath: Sound
       value: 

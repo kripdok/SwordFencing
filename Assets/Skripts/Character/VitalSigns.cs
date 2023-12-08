@@ -3,8 +3,8 @@ using System;
 public abstract class VitalSigns
 {
     protected int MaxValue;
-    public float ConcreteValue { get; protected set; }
 
+    public float ConcreteValue { get; protected set; }
 
     public VitalSigns(int maxValue)
     {

@@ -32,19 +32,6 @@ public class SwipeDetection : ISubscriber
         _input.OnMultiTap -= DetectMultiTap;
     }
 
-    private void SwipeStart(Vector2 position, float time)
-    {
-        _startPosition = position;
-        _startTime = time;
-    }
-
-    private void SwipeEnd(Vector2 position, float time)
-    {
-        _endPosition = position;
-        _endTime = time;
-        DetectSwipe();
-    }
-
     protected virtual void DetectSwipe()
     {
         if (Vector2.Distance(_startPosition, _endPosition) > _minDistance && _endTime - _startTime < _maxTime)
@@ -60,4 +47,16 @@ public class SwipeDetection : ISubscriber
         EventBus.Instance.Invoke(new MultiTapSignal(tapPosition));
     }
 
+    private void SwipeStart(Vector2 position, float time)
+    {
+        _startPosition = position;
+        _startTime = time;
+    }
+
+    private void SwipeEnd(Vector2 position, float time)
+    {
+        _endPosition = position;
+        _endTime = time;
+        DetectSwipe();
+    }
 }

@@ -815,6 +815,22 @@ PrefabInstance:
       propertyPath: _menuWindows
       value: 
       objectReference: {fileID: 218299251}
+    - target: {fileID: 2595308528436743143, guid: 8c913e6da73a26a46830e70ca28f7673, type: 3}
+      propertyPath: <CoinsUI>k__BackingField
+      value: 
+      objectReference: {fileID: 1930847942}
+    - target: {fileID: 2595308528436743143, guid: 8c913e6da73a26a46830e70ca28f7673, type: 3}
+      propertyPath: <TimerUI>k__BackingField
+      value: 
+      objectReference: {fileID: 1478420141}
+    - target: {fileID: 2595308528436743143, guid: 8c913e6da73a26a46830e70ca28f7673, type: 3}
+      propertyPath: <HealthBar>k__BackingField
+      value: 
+      objectReference: {fileID: 554340630}
+    - target: {fileID: 2595308528436743143, guid: 8c913e6da73a26a46830e70ca28f7673, type: 3}
+      propertyPath: <StaminaBar>k__BackingField
+      value: 
+      objectReference: {fileID: 486893888}
     - target: {fileID: 2595308529431971584, guid: 8c913e6da73a26a46830e70ca28f7673, type: 3}
       propertyPath: _openScene
       value: 
@@ -872,7 +888,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2016954898}
     - target: {fileID: 2595308529831280582, guid: 8c913e6da73a26a46830e70ca28f7673, type: 3}
+      propertyPath: _timer
+      value: 
+      objectReference: {fileID: 11400000, guid: e1b5606f8bf12764e8ec15f18c476e81, type: 2}
+    - target: {fileID: 2595308529831280582, guid: 8c913e6da73a26a46830e70ca28f7673, type: 3}
       propertyPath: _player
+      value: 
+      objectReference: {fileID: 235372989}
+    - target: {fileID: 2595308529831280582, guid: 8c913e6da73a26a46830e70ca28f7673, type: 3}
+      propertyPath: <Player>k__BackingField
       value: 
       objectReference: {fileID: 235372989}
     - target: {fileID: 2627197753728678237, guid: 8c913e6da73a26a46830e70ca28f7673, type: 3}

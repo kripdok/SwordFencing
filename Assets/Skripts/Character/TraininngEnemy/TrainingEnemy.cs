@@ -1,4 +1,3 @@
-using UnityEngine;
 using UnityEngine.Events;
 
 public class TrainingEnemy : Enemy
@@ -44,6 +43,4 @@ public class TrainingEnemy : Enemy
     {
         FinishAttackState?.Invoke();
     }
-
-
 }

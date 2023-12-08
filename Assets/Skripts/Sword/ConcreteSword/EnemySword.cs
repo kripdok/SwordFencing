@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class EnemySword : Sword
 {
     [field: SerializeField] public EnemySwordName Name { get; private set; }
+
     public EnemySwordAnimatorController AnimatorController { get; private set; }
 
     public event UnityAction WasRepelled;

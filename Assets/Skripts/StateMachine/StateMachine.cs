@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 public class StateMachine
 {
-
     private Dictionary<Type, State> _states = new Dictionary<Type, State>();
     protected State CorrectState;
 

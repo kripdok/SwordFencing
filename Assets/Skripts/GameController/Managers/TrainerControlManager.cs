@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class TrainerControlManager : ControlManager
 {
     public override void Initialize(Player player, ContactPointer contactPointer)

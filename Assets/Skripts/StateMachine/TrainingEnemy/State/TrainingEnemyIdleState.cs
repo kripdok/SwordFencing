@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class TrainingEnemyIdleState : TrainingEnemyState
 {
     private TrainingEnemy _enemy;

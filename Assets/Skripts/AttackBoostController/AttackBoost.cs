@@ -33,5 +33,4 @@ public class AttackBoost : MonoBehaviour, IPointerEnterHandler
         yield return new WaitForSeconds(_waitingTime);
         gameObject.SetActive(false);
     }
-
 }

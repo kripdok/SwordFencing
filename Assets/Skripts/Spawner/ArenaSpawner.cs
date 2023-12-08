@@ -4,7 +4,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(EnemyPool))]
 [RequireComponent(typeof(EnemySwordPool))]
-
 public class ArenaSpawner : Spawner
 {
     [SerializeField] private ParticleSystem _appearanceEffect;

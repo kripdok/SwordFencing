@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class CallbackWithPriority
 {
     public readonly int Priority;

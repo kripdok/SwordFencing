@@ -23,8 +23,6 @@ public class PlayerDataLocalProvider : IDataProvider
         {
             ReferenceLoopHandling = ReferenceLoopHandling.Ignore
         }));
-
-        
     }
 
     public bool TryLoad()

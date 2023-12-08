@@ -2,17 +2,15 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    private IPersistentData _persistentData;
+    public IPersistentData PersistentData { get; private set; }
     public PlayerDataLocalProvider PlayerProvider { get; private set; }
     public SettingsDataLocalProvider SettingsProvider { get; private set; }
 
-    public IPersistentData PersistentData => _persistentData;
-
     public void Initialize()
     {
-        _persistentData = new PersistentData();
-        PlayerProvider = new PlayerDataLocalProvider(_persistentData);
-        SettingsProvider = new SettingsDataLocalProvider(_persistentData);
+        PersistentData = new PersistentData();
+        PlayerProvider = new PlayerDataLocalProvider(PersistentData);
+        SettingsProvider = new SettingsDataLocalProvider(PersistentData);
 
         LoadDataOrInit();
     }
@@ -27,12 +25,12 @@ public class DataManager : MonoBehaviour
     {
         if (PlayerProvider.TryLoad() == false)
         {
-            _persistentData.PlayerData = new PlayerData();
+            PersistentData.PlayerData = new PlayerData();
         }
 
         if (SettingsProvider.TryLoad() == false)
         {
-            _persistentData.SettingsData = new SettingsData();
+            PersistentData.SettingsData = new SettingsData();
         }
     }
 }

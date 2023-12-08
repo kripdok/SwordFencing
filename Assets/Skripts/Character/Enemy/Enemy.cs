@@ -1,25 +1,23 @@
 using UnityEngine;
 using UnityEngine.Events;
 using DG.Tweening;
-using System.Reflection.Emit;
 
 [RequireComponent(typeof (AudioSource))]
 public class Enemy : MonoBehaviour , ICanBeDamaged
 {
     [field: SerializeField] public EnemyName Name { get; private set; }
+
     [SerializeField] protected RuntimeStates RuntimeStates;
     [SerializeField] private Transform _arm;
     [SerializeField] private int _health;
     [SerializeField] private int _coins;
 
     protected StateMachine StateMachine;
-    private EnemySword _sword;
-    private Swipe _swipe;
     private bool _isTakeDamage;
 
-    public Swipe Swipe => _swipe;
-    public EnemySword Sword => _sword;
 
+    public EnemySword Sword { get; private set; }
+    public Swipe Swipe { get; private set; }
     public EnemySound Sound { get; private set; }
     public HealthSystem Health { get; private set; }
 
@@ -27,11 +25,11 @@ public class Enemy : MonoBehaviour , ICanBeDamaged
 
     public virtual void Initialize(EnemySword sword, EnemySound enemySound)
     {
-        _sword = sword;
+        Sword = sword;
         Sound = enemySound;
         Sound.Initialize(GetComponent<AudioSource>());
-        _sword.transform.SetParent(_arm);
-        _sword.transform.position = _arm.position;
+        Sword.transform.SetParent(_arm);
+        Sword.transform.position = _arm.position;
         _isTakeDamage = false;
 
 
@@ -92,7 +90,7 @@ public class Enemy : MonoBehaviour , ICanBeDamaged
 
     private void OnPlayerSwiped(PlayerSwipedSignal signal)
     {
-        _swipe = signal.Swipe;
+        Swipe = signal.Swipe;
         PlayerSwipeDetected?.Invoke();
     }
 

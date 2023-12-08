@@ -39,10 +39,10 @@ public class ServiceLocator
     public void Register<T>(T service) where T : IService
     {
         string key = typeof(T).Name;
+
         if (_services.ContainsKey(key))
         {
-            Debug.LogError(
-                $"Attempted to register service of type {key} which is already registered with the {GetType().Name}.");
+            Debug.LogError($"Attempted to register service of type {key} which is already registered with the {GetType().Name}.");
             return;
         }
 
@@ -52,10 +52,10 @@ public class ServiceLocator
     public void Unregister<T>() where T : IService
     {
         string key = typeof(T).Name;
+
         if (!_services.ContainsKey(key))
         {
-            Debug.LogError(
-                $"Attempted to unregister service of type {key} which is not registered with the {GetType().Name}.");
+            Debug.LogError($"Attempted to unregister service of type {key} which is not registered with the {GetType().Name}.");
             return;
         }
 

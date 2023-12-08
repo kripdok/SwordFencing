@@ -33,7 +33,7 @@ public class PlayerInput : ISubscriber
         }
     }
 
-    public PlayerInput()
+    private PlayerInput()
     {
         Controller = new InputController();
         Controller.Disable();

@@ -10,12 +10,9 @@ public class ShopItemView : MonoBehaviour, IPointerClickHandler
 
     [SerializeField] private Sprite _standartBackground;
     [SerializeField] private Sprite _highlightBackground;
-
     [SerializeField] private Image _contentImage;
     [SerializeField] private Image _lockImage;
-
     [SerializeField] private IntValueView _priceView;
-
     [SerializeField] private Image _selectionText;
 
     private Image _backgroundImage;

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7ba19987943da43b5ce9ead53e15c7, type: 3}
   m_Name: PlayerSound
   m_EditorClassIdentifier: 
-  _takingDamage:
+  _takeDamage:
   - {fileID: 8300000, guid: 79ec82059bc31af4d81c48f59df58046, type: 3}

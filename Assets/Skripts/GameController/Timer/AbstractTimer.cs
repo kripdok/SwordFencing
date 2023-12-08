@@ -9,5 +9,6 @@ public abstract class AbstractTimer : ScriptableObject
     public abstract void Initialize(TimerUI timerUI);
 
     public abstract void Update();
+
     protected abstract void ChangeTimerValue();
 }

@@ -1,16 +1,13 @@
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 [RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour, ISubscriber , ICanBeDamaged
 {
-
-    [SerializeField] private int _maxHealth;
-    [SerializeField] private int _maxStamina;
-
     [field: SerializeField] public PlayerSound Sound { get; private set; }
     [field: SerializeField] public Transform Arm { get; private set; }
 
+    [SerializeField] private int _maxHealth;
+    [SerializeField] private int _maxStamina;
 
     public readonly float DefenseRuntime = 1;
     private AudioSource _audioSource;
@@ -48,11 +45,6 @@ public class Player : MonoBehaviour, ISubscriber , ICanBeDamaged
         Health.Died -= OnDied;
     }
 
-    public void Updates()
-    {
-        StateMachine.Update();
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -73,6 +65,11 @@ public class Player : MonoBehaviour, ISubscriber , ICanBeDamaged
                 _isTakeDamage = false;
             }
         }
+    }
+
+    public void Updates()
+    {
+        StateMachine.Update();
     }
 
     private void OnDied()

@@ -17,29 +17,6 @@ public class PlayerData
     public IEnumerable<PointerSkins> OpenPointerSkins => _openPointerSkins;
     public IEnumerable<NameScenes> OpenLevels => _openLevels;
 
-
-    public PlayerData()
-    {
-        _money = 1000;
-        _selectedSword = SwordSkins.Blue;
-        _selectedPointer = PointerSkins.Blue;
-
-        _openPointerSkins = new List<PointerSkins>() { _selectedPointer };
-        _openSwordSkins = new List<SwordSkins>() { _selectedSword };
-        _openLevels = new List<NameScenes>() { NameScenes.DuelLevel0 };
-    }
-
-    [JsonConstructor]
-    public PlayerData(int money, SwordSkins selectionSwordSkin,PointerSkins selectionPointerSkins, List<SwordSkins> openSwordSkins,List<PointerSkins> openPointerSkins, List<NameScenes> openLevels)
-    {
-        _money = money;
-        _selectedPointer = selectionPointerSkins;
-        _selectedSword = selectionSwordSkin;
-        _openPointerSkins = openPointerSkins;
-        _openSwordSkins = openSwordSkins;
-        _openLevels = openLevels;
-    }
-
     public int Money
     {
         get => _money;
@@ -111,5 +88,27 @@ public class PlayerData
         }
 
         _openLevels.Add(scene);
+    }
+
+    public PlayerData()
+    {
+        _money = 1000;
+        _selectedSword = SwordSkins.Blue;
+        _selectedPointer = PointerSkins.Blue;
+
+        _openPointerSkins = new List<PointerSkins>() { _selectedPointer };
+        _openSwordSkins = new List<SwordSkins>() { _selectedSword };
+        _openLevels = new List<NameScenes>() { NameScenes.DuelLevel0 };
+    }
+
+    [JsonConstructor]
+    public PlayerData(int money, SwordSkins selectionSwordSkin,PointerSkins selectionPointerSkins, List<SwordSkins> openSwordSkins,List<PointerSkins> openPointerSkins, List<NameScenes> openLevels)
+    {
+        _money = money;
+        _selectedPointer = selectionPointerSkins;
+        _selectedSword = selectionSwordSkin;
+        _openPointerSkins = openPointerSkins;
+        _openSwordSkins = openSwordSkins;
+        _openLevels = openLevels;
     }
 }

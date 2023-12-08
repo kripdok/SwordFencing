@@ -6,14 +6,11 @@ public class Shop : MonoBehaviour
 {
     [SerializeField] private SwordContent _swordItems;
     [SerializeField] private PointerContent _pointerItems;
-
     [SerializeField] private ShopCategoryButton _swordSkinsButton;
     [SerializeField] private ShopCategoryButton _pointerSkinsButton;
-
     [SerializeField] private BuyButton _buyButton;
     [SerializeField] private Button _selectionButton;
     [SerializeField] private Image _selectedText;
-
     [SerializeField] private ShopPanel _shopPanel;
 
     private DataManager _dataManager;
@@ -38,6 +35,7 @@ public class Shop : MonoBehaviour
 
         OnSwordSkinsButtonClick();
     }
+
     private void OnEnable()
     {
         _pointerSkinsButton.Click += OnPointerSkinsButtonClick;

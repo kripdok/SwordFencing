@@ -3,26 +3,23 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class UIManager : MonoBehaviour, ISubscriber
 {
+    [field: SerializeField] public SliderBar HealthBar { get; private set; }
+    [field: SerializeField] public SliderBar StaminaBar { get; private set; }
+    [field: SerializeField] public TimerUI TimerUI { get; private set; }
+    [field: SerializeField] public CoinsUI CoinsUI { get; private set; }
+
     [SerializeField] private UISound _sound;
-    [SerializeField] private CoinsUI _coinsUI;
     [SerializeField] private MenuWindows _menuWindows;
     [SerializeField] private GameOver _gameOver;
-    [SerializeField] private SliderBar _healthBar;
-    [SerializeField] private SliderBar _staminaBar;
-    [SerializeField] private TimerUI _timerUI;
     [SerializeField] private CountdownTimerController _countdownTimerController;
 
-    public CoinsUI CoinsUI => _coinsUI;
-    public TimerUI TimerUI => _timerUI;
-    public SliderBar StaminaBar => _staminaBar;
-    public SliderBar HealthBar => _healthBar;
 
     public void Initialize()
     {
         _sound.Initialize(GetComponent<AudioSource>());
         _gameOver.Initialize(_menuWindows);
-        _healthBar.Initialize();
-        _staminaBar.Initialize();
+        HealthBar.Initialize();
+        StaminaBar.Initialize();
         _countdownTimerController.Initialize();
 
         _sound.PlayCountdownTimer();
